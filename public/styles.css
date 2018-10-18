@@ -1,0 +1,824 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: snow;
+    scroll-behavior: smooth;
+}
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+    font-size: 0.75em;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    font-size: 100%;
+    background-color: snow;
+}
+select, textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+input[type=text] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    resize: vertical
+}
+#subject {
+    font-family: "Exo Light";
+    font-weight: lighter;
+    font-size: 1.3em;
+    height: 150px;
+    width: 100%;
+    background-color: white;
+    margin: 10px;
+    resize: none;
+}
+#fname {
+    width: 100%;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    font-size: 1.2em;
+    background-color: white;
+}
+.enter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: snow;
+    width: 100%;
+    height: 100%;
+}
+.enter h1 {
+    font-family: "Exo Light";
+    font-weight: lighter;
+    font-size: 75px;
+    cursor: pointer;
+}
+.enter h1:hover {
+    font-family: "Exo Light";
+    font-weight: lighter;
+    color: lightgray;
+}
+.enter img {
+    height: 175px;
+    width: 125px;
+    color: none;
+    background: none;
+}
+.enter img:hover {
+    transition: 0.3s;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+.enter a {
+    position: relative;
+    top: 220px;
+    text-decoration: none;
+    color: black;
+}
+
+/* ENTER EFFECTS */
+
+#enter a {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+
+    -webkit-animation: fadein 5s ease;
+       -moz-animation: fadein 5s ease;
+        -ms-animation: fadein 5s ease;
+         -o-animation: fadein 5s ease;
+            animation: fadein 5s ease;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* HEADER */
+
+.head {
+    position: relative;
+    left: 14%;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    background-color: snow;
+    font-size: 3.5em;
+    cursor: pointer;
+}
+.head strong {
+    background-color: snow;
+}
+
+.head a {
+    text-decoration: none;
+    color: black;
+}
+.name {
+    background-color: snow;
+}
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    height: 9em;
+    background-color: snow;
+    box-shadow: 0 0 10px;
+    z-index: 99;
+    transition: top 0.2s ease-in-out;
+}
+
+/* FOOTER  */
+
+.container {
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    background-color: snow;
+    position: relative;
+    bottom: 0;
+    font-family: "Exo Light";
+    z-index: 99;
+    box-shadow: 0 0 10px;
+    scroll-behavior: smooth;
+}
+.container p {
+    display: block;
+    position: absolute;
+    left: 41%;
+    bottom: 1%;
+}
+.h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 2em;
+    top:0;
+    width: 50%;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    background-color: snow;
+}
+.form {
+    font-family: "Exo Light";
+    font-weight: lighter;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    width: 60%;
+    background-color: snow;
+}
+.submit {
+    font-family: "Exo Light";
+    font-weight: lighter;
+    width: 8.2em;
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+}
+.submit:hover {
+    background-color: lightgray;
+    color: black;
+}
+.contactForm {
+    font-family: "Exo Light";
+    font-weight: lighter;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    left: 100px;
+    background-color: snow;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: inherit;
+}
+.contact h1 {
+    background-color: snow;
+    font-family: "Exo Light";
+    font-weight: lighter;
+}
+
+/* BODY */
+
+.navBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    left: 23%;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    font-size: 2em;
+    list-style-type: none;
+    background-color: snow;
+}
+.navBar li {
+    background-color: snow;
+}
+.navBar a {
+    background-color: snow;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.navBar a:hover {
+    color: lightgray;
+}
+
+.navbarLi {
+    float: right;
+    background-color: snow;
+}
+.details {
+    flex: auto;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    font-size: 1.4em;
+    list-style-type: none;
+    position: absolute;
+    right: 9%;
+    bottom: 37.25%;
+    background-color: snow;
+}
+.details li {
+    background-color: snow;
+}
+.frontImage {
+    font-size:0;
+    background-size:cover;
+    position:relative;
+    z-index: 1;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.frontImage a {
+    padding: 0;
+}
+#caption {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    font-size: 150px;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    color: black;
+    opacity:0;
+    transition: 0.7s ease-in-out;
+    background-color: transparent;
+    z-index: 99;
+    cursor: pointer;
+}
+#caption:hover {
+    color: snow;
+    cursor: pointer;
+}
+.frontImage:hover + #caption{
+  opacity:1;
+}
+.frontImage > a:hover {
+    filter: brightness(92%);
+}
+#caption:hover{
+  opacity:1;
+}
+.fa {
+    font-size: 1em;
+    text-decoration: none;
+    color: black;
+}
+.fa2 {
+    font-size: 3em;
+    text-decoration: none;
+    color: black;
+}
+.about {
+    width: 100%;
+    height: 50em;
+    background-color: snow;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.bio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: snow;
+    cursor: pointer;
+    border-bottom: 1px solid;
+}
+.h1A:hover {
+    transition: color 0.3s ease-in-out;
+    color: lightgray;
+}
+.bio h1 {
+    position: relative;
+    background-color: snow;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    font-size: 4em;
+    margin: 0.4em;
+}
+.image-video {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.images {
+    text-decoration: none;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    font-size: 7em;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    z-index: 1;
+}
+.images a {
+    text-decoration: none;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    color: black;
+    background-color: transparent;
+}
+.images:hover {
+    background-color: lightgray;
+    color: snow;
+}
+.images:hover > a {
+    background-color: lightgray;
+    color: snow;
+}
+.videos {
+    text-decoration: none;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    font-size: 7em;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    z-index: 1;
+}
+.videos a {
+    text-decoration: none;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    color: black;
+    background-color: transparent;
+}
+.videos:hover {
+    background-color: lightgray;
+    color: snow;
+}
+.videos:hover > a {
+    background-color: lightgray;
+    color: snow;
+}
+.me {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 2px;
+    grid
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+}
+.meBio {
+    font-family: "Exo Light";
+    font-weight: lighter;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 0;
+}
+.meBio h1 {
+    color: black;
+}
+.mePhoto {
+    font-family: "Exo Light";
+    font-weight: lighter;
+    width: 50%;
+    height: 100%;
+}
+.mePhoto img {
+    height: auto;
+    width: 100%;
+}
+.page {
+  float: left;
+  width: 100vw;
+  height: 100vh;
+}
+.docScroller {
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  max-width: 100%;
+  height: 100%;
+  overflow: auto;
+  scroll-snap-points-y: repeat(100%);
+  scroll-snap-type: mandatory;
+  scroll-snap-destination: 100% 0%;
+}
+#inside {
+    align-items: center;
+    background-color: snow;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+#inside2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: snow;
+    width: 100%;
+    height: 100%;
+}
+.one {
+  background-color: snow;
+}
+.two {
+  background-color: snow;
+}
+.three {
+  background-color: lightgray;
+}
+.four {
+  background-color: lightgray;
+}
+.bioImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    font-size: 50px;
+    color: snow;
+}
+.bioImage:hover {
+    color: black;
+}
+.bioImage2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    float: left;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    font-size: 100px;
+    color: snow;
+}
+.bioImage2:hover {
+    color: black;
+}
+.bioImage2 a {
+    background: transparent;
+    text-decoration: none;
+    color: black;
+    position: absolute;
+}
+.bioImage2 a:hover {
+    text-decoration: none;
+    color: lightgray;
+}
+.bioImg {
+    width: 350px;
+    height: 450px;
+    border-radius: 50%;
+}
+.bioImg:hover {
+    filter: brightness(90%);
+    box-shadow: 0 0 5px;
+}
+#hello {
+    position: relative;
+    display: none;
+    bottom: 80%;
+    left: 6%;
+    font-size: 60px;
+    margin-top: 10px;
+    padding: 5px;
+    text-transform: uppercase;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    color: snow;
+}
+.bioImage:hover + #hello {
+    transition: all 0.5s ease-in-out;
+    display: block;
+    z-index: 999;
+    background-color: transparent;
+}
+.bioBio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.özlem {
+    display: flex;
+    justify-content: center;
+    width: 49%;
+    height: 97%;
+    box-shadow: 0 0 5px;
+}
+.özlem h1  {
+    font-family: "Exo Light";
+    font-weight: lighter;
+    position: relative;
+    top: 100px;
+    height: 0;
+}
+.özlem a {
+    text-decoration: none;
+    color: black;
+}
+.özlem a:hover {
+    color: lightgray;
+}
+.özlem2 {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: 100vh;
+}
+.özlem2 h1  {
+    font-family: "Exo Light";
+    font-weight: lighter;
+    position: relative;
+    top: 100px;
+    height: 25px;
+}
+.özlem2 a {
+    text-decoration: none;
+    color: black;
+}
+.özlem2 a:hover {
+    color: lightgray;
+}
+.hello {
+    font-weight: lighter;
+    font-family: "Exo Light";
+    position: relative;
+    max-width: 138px;
+    bottom: 100px;
+    left: 44.8%;
+}
+.ref {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    max-height: 100%;
+    width: 50%;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    border-left: 10px solid lightgray;
+    border-top: 10px solid lightgray;
+    border-bottom: 10px solid lightgray;
+    box-shadow: 0 0 5px;
+    margin: 2px;
+}
+.ref h1 {
+    position: relative;
+    top: -5%;
+}
+.ref p {
+    margin: 10px;
+}
+.ref2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    max-height: 100%;
+    width: 50%;
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    border-right: 10px solid lightgray;
+    border-top: 10px solid lightgray;
+    border-bottom: 10px solid lightgray;
+    box-shadow: 0 0 5px;
+    margin: 2px;
+}
+.ref2 h1 {
+    position: relative;
+    top: -5%;
+}
+.ref2 p {
+    margin: 10px;
+}
+.about {
+    border: 1px solid;
+    width: 75%;
+    height: 75%;
+}
+.btn {
+    position: absolute;
+    text-decoration: none;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    font-size: 25px;
+    color: black;
+    background-color: transparent;
+    top: 40px;
+    z-index: 999;
+    cursor: pointer;
+}
+.btn:hover {
+    color: lightgray;
+}
+.btn2 {
+    position: absolute;
+    text-decoration: none;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    font-size: 25px;
+    color: black;
+    background-color: transparent;
+    top: 45px;
+    left: 48.75%;
+    z-index: 999;
+    cursor: pointer;
+}
+.btn2:hover {
+    color: lightgray;
+}
+.btn3 {
+    position: fixed;
+    text-decoration: none;
+    font-family: "Exo Light";
+    font-weight: lighter;
+    font-size: 25px;
+    color: snow;
+    background-color: transparent;
+    top: 40px;
+    left: 48.5%;
+    z-index: 999;
+    cursor: pointer;
+}
+.btn3:hover {
+    color: lightgray;
+}
+.modalDiv {
+    background-color: rgb(255,250,250, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#modal-image2 {
+    position: fixed;
+    max-height: 95%;
+    max-width: 95%;
+    z-index: 999;
+}
+.image-modal {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-modal-div {
+    max-width: 100%;
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+#close-button {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    color: snow;
+    font-size: 30px;
+    z-index: 9999;
+}
+.modal-image {
+    max-width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.modal-image:hover {
+    filter: brightness(90%);
+}
+.video-modal {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 0;
+}
+.video-modal-div {
+    max-width: 100%;
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-row-gap: 0;
+}
+.modal-video {
+    max-width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+#modal-video2 {
+    position: relative;
+    max-height: 95%;
+    max-width: 95%;
+}
+.modal-video:hover {
+    filter: brightness(90%);
+}
+#keydown_con {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    background: snow;
+    top: 45%;
+    left: 2.5%;
+    z-index: 9999;
+}
+#keydown_con2 {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    background: snow;
+    top: 45%;
+    right: 2.5%;
+    z-index: 9999;
+}
